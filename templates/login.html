@@ -1,0 +1,19 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'reg.css' %}">
+
+<div class="wrapper">
+    <form method="post">
+        {% csrf_token %}
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" required name="username">
+        <label>Enter your username</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required name="password">
+        <label>Enter your password</label>
+      </div>
+      <button type="submit" value="Registrate">Log In</button>
+    </form>
+</div>
